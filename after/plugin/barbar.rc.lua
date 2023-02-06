@@ -107,7 +107,6 @@ nvim_tree_events.subscribe('TreeOpen', function()
   bufferline_api.set_offset(get_tree_size())
 end)
 
--- Bindings
 nvim_tree_events.subscribe('Resize', function()
   bufferline_api.set_offset(get_tree_size())
 end)
@@ -116,6 +115,7 @@ nvim_tree_events.subscribe('TreeClose', function()
   bufferline_api.set_offset(0)
 end)
 
+-- Bindings
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
