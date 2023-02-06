@@ -48,6 +48,7 @@ filetype plugin on
 syntax enable
 colorscheme nightfox
 hi Normal guibg=NONE ctermbg=NONE
+hi CursorLine guibg=NONE ctermbg=NONE
 
 " Keybindings
 set pastetoggle=<F3>
