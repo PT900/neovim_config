@@ -12,10 +12,3 @@ hooks = {
     )
   end,
 }
-
--- Bindings
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-map('n', '<F7>', '<Cmd>DiffviewOpen<CR>', opts)
-map('n', '<F8>', '<Cmd>DiffviewClose<CR>', opts)

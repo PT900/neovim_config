@@ -18,10 +18,12 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 vim.g.mapleader=','
 -- Plugins
 keymap.set('n', '<F5>', '<Cmd>NvimTreeToggle<CR>', opts)
-keymap.set('n', '<F8>', '<Cmd>TagbarToggle<CR>', opts)
+keymap.set('n', '<F6>', '<Cmd>TagbarToggle<CR>', opts)
 keymap.set('n', '<F12>', '<Cmd>ShowSpaces 1<CR>', s)
 keymap.set('n', '<S-F12>', 'm`<Cmd>TagbarToggle<CR>')
 keymap.set('v', '<S-F-12>', '<Cmd>TrimSpaces<CR>')
+keymap.set('n', '<F7>', '<Cmd>DiffviewOpen<CR>', opts)
+keymap.set('n', '<F8>', '<Cmd>DiffviewClose<CR>', opts)
 -- Telescope
 keymap.set('n', '<leader>ff', '<Cmd>Telescope find_files<CR>', opt)
 keymap.set('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opt)

@@ -39,7 +39,7 @@ cmp.setup({
 
     ['<Tab>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
-      select = false
+      select = true
     }),
   }),
   sources = cmp.config.sources({
@@ -48,6 +48,7 @@ cmp.setup({
   }),
   formatting = {
     format = lspkind.cmp_format({
+      mode = 'symbol_text',
       maxwidth = 50,
       before = function(entry, vim_item)
         vim_item = formatForTailwindCSS(entry, vim_item)
@@ -58,6 +59,6 @@ cmp.setup({
 })
 
 vim.cmd [[
-  set completeopt=menuone,noinsert,noselect
+  set completeopt=menu,menuone,noinsert,preview
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]]
