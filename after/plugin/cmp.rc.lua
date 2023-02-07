@@ -1,6 +1,7 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require 'lspkind'
+local select_opts = {behavior = cmp.SelectBehavior.Select}
 
 local function formatForTailwindCSS(entry, vim_item)
   if vim_item.kind == 'Color' and entry.completion_item.documentation then
@@ -27,13 +28,18 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
+    ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
+    ['<Down>'] = cmp.mapping.select_next_item(select_opts),
+    ['<C-n>'] = cmp.mapping.select_prev_item(select_opts),
+    ['<C-p>'] = cmp.mapping.select_next_item(select_opts),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm({
+
+    ['<Tab>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
-      select = true
+      select = false
     }),
   }),
   sources = cmp.config.sources({
