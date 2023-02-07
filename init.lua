@@ -1,0 +1,8 @@
+require('impatient')
+require('pt900.plugins')
+require('pt900.base')
+require('pt900.windows')
+require('pt900.colorscheme')
+require('pt900.bindings')
+require('pt900.showspace')
+require('pt900.highlights')

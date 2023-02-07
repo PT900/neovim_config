@@ -1,9 +1,3 @@
-nnoremap <silent> <leader>ff <Cmd>Telescope find_files<CR>
-nnoremap <silent> <leader>fg <Cmd>Telescope live_grep<CR>
-nnoremap <silent> <leader>fb <Cmd>Telescope buffers<CR>
-nnoremap <silent> <leader>fh <Cmd>Telescope help_tags<CR>
-
-lua << EOF
 local actions = require('telescope.actions')
 
 require('telescope').setup {
@@ -25,4 +19,3 @@ require('telescope').setup {
 }
 
 -- require('telescope').load_extension('fzf')
-EOF

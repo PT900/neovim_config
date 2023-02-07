@@ -1,12 +1,7 @@
-if !exists('g:loaded_nvim_treesitter')
-    finish
-endif
-
-lua << EOF
 require 'nvim-treesitter.install'.compilers = { "clang" }
 require 'nvim-treesitter.install'.prefer_git = false
 require 'nvim-treesitter.configs'.setup {
-    auto_install = true,
+    -- auto_install = true,
     highlight = {
         enable = true,
         disable = {},
@@ -14,6 +9,10 @@ require 'nvim-treesitter.configs'.setup {
     indent = {
         enable = true,
         disable = {},
+    },
+    matchup = {
+      enable = true,
+      disable = {},
     },
     ensure_installed = {
         "toml",
@@ -34,4 +33,6 @@ require 'nvim-treesitter.configs'.setup {
       enable = true,
     },
 }
-EOF
+
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
