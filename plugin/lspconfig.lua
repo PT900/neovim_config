@@ -72,12 +72,11 @@ nvim_lsp.clangd.setup {
 }
 
 -- Typescript
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" },
-  capabilities = capabilities
-}
+-- nvim_lsp.tsserver.setup {
+--   on_attach = on_attach,
+--   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+--   cmd = { "typescript-language-server", "--stdio" },
+-- }
 
 -- XML
 nvim_lsp.lemminx.setup {
@@ -94,7 +93,7 @@ nvim_lsp.dartls.setup {
 -- Lua
 nvim_lsp.sumneko_lua.setup {
   capabilities = capabilities,
-  on_attach = function(client, bufnr)   --   on_attach(client, bufnr)
+  on_attach = function(client, bufnr)
     enable_format_on_save(client, bufnr)
   end,
   settings = {
@@ -104,7 +103,7 @@ nvim_lsp.sumneko_lua.setup {
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = { 'vim', 'pcall' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
@@ -118,6 +117,19 @@ nvim_lsp.sumneko_lua.setup {
     },
   },
 }
+
+-- CSS
+nvim_lsp.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+-- Tailwind CSS
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 
 -- Python
 nvim_lsp.pylsp.setup {
