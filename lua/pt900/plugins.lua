@@ -37,7 +37,7 @@ packer.startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'cohama/lexima.vim'
-  use {'andymass/vim-matchup', event = 'VimEnter'}
+  use { 'andymass/vim-matchup', event = 'VimEnter' }
   use { 'numToStr/Comment.nvim',
     requires = {
       'JoosepAlviste/nvim-ts-context-commentstring'
