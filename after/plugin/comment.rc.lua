@@ -9,6 +9,12 @@ comment.setup {
     -- Block comment
     block = '<leaderbc',
   },
+  opleader = {
+    -- Line visual comment
+    line = '<leader>c',
+    -- Block visual comment
+    block = '<leader>b'
+  },
   pre_hook = function(ctx)
     -- Only calculate commentstring for tsx filetypes
     if vim.bo.filetype == 'typescriptreact' then
