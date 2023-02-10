@@ -16,8 +16,5 @@ require('pt900.colorscheme')
 -- Keybindings
 require('pt900.bindings')
 
--- Function to show extra whitespace
-require('pt900.showspace')
-
 -- Show highlights when yank
 require('pt900.highlights')

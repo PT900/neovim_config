@@ -37,6 +37,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   -- Code format
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'ntpeters/vim-better-whitespace' -- Trim extra whitespace
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   -- Beautify
