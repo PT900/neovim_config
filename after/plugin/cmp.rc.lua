@@ -37,6 +37,7 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping.scroll_docs(-4),
 
     ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<Tab>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
