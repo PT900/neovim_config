@@ -67,8 +67,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- C, C++
 nvim_lsp.clangd.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
 }
 
 -- Typescript
@@ -80,14 +82,18 @@ nvim_lsp.clangd.setup {
 
 -- XML
 nvim_lsp.lemminx.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
 }
 
 -- Dart
 nvim_lsp.dartls.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
 }
 
 -- Lua
@@ -133,8 +139,10 @@ nvim_lsp.tailwindcss.setup {
 
 -- Python
 nvim_lsp.pylsp.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
   settings = {
     pylsp = {
       plugins = {

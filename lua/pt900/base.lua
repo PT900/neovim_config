@@ -21,6 +21,7 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
+vim.cmd("set tw=150") -- Text width 150
 vim.opt.wrap = false -- No Wrap lines
 vim.cmd("filetype plugin on")
 vim.opt.backspace = { 'start', 'eol', 'indent' }

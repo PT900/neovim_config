@@ -15,8 +15,8 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'neovim/nvim-lspconfig'
   use 'mattn/vim-lsp-settings'
-  -- use 'williamboman/mason.nvim'
-  -- use 'williamboman/mason-lspconfig.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind.nvim'
   use {
@@ -36,7 +36,8 @@ packer.startup(function(use)
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   use 'nvim-telescope/telescope-file-browser.nvim'
   -- Code format
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as language server
+  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in
   use 'ntpeters/vim-better-whitespace' -- Trim extra whitespace
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'

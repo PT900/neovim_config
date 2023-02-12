@@ -7,7 +7,9 @@ keymap.set('n', '<C-a>', 'gg<S-v>G') -- Select all
 keymap.set('n', '+', '<C-a>') -- Increment
 keymap.set('n', '-', '<C-x>') -- Decrement
 keymap.set('i', '<C-BS>', 'vb"_d', opts) -- Delete a word backwards
-keymap.set('n', '<C-s>', '<Cmd>w<CR>') -- Save with Ctrl+S
+keymap.set('n', '<C-s>', '<Cmd>w<CR>') -- Save with Ctrl+s
+keymap.set('n', '<C-c>', 'Y') -- Yank with Ctrl+c in normal mode
+keymap.set('v', '<C-c>', 'Y') -- Yank with Ctrl+c in visual mode
 -- Resize window
 keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
