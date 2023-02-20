@@ -15,14 +15,14 @@ vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
-vim.opt.scrolloff = 80
+vim.opt.scrolloff = 8
 -- vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.cmd("set tw=150") -- Text width 150
+vim.go.tw = 150
 vim.opt.wrap = false -- No Wrap lines
 vim.cmd("filetype plugin on")
 vim.opt.backspace = { 'start', 'eol', 'indent' }
