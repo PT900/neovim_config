@@ -23,7 +23,6 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.colorcolumn = "80"
 vim.opt.updatetime = 50
 vim.opt.signcolumn = "yes"
 vim.go.tw = 150

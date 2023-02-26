@@ -36,9 +36,9 @@ packer.startup(function(use)
 
       -- Snippets
       { 'L3MON4D3/LuaSnip' }, -- Required
-      { 'rafamadriz/friendly-snippets' }, -- Optional
-    }
+    },
   }
+  use 'akinsho/flutter-tools.nvim' -- Flutter tools that provide all thing include LSP for dart
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim',
