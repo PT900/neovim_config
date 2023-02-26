@@ -22,7 +22,7 @@ keymap.set('n', '<F5>', '<Cmd>NvimTreeToggle<CR>', opts)
 keymap.set('n', '<F6>', '<Cmd>TagbarToggle<CR>', opts)
 keymap.set('n', '<F7>', '<Cmd>DiffviewOpen<CR>', opts)
 keymap.set('n', '<F8>', '<Cmd>DiffviewClose<CR>', opts)
-keymap.set('n', '<S-F12>', '<Cmd>StripTrailingWhitespace<CR>', opts)
+keymap.set('n', '<S-F12>', '<Cmd>StripTrailingWhitespace<CR><Cmd>w<CR>', opts) -- Remove whitespace and save
 -- Telescope
 keymap.set('n', '<leader>ff', '<Cmd>Telescope find_files<CR>', opts)
 keymap.set('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opts)
@@ -50,14 +50,6 @@ keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
 keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
 keymap.set('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 -- Sort automatically by...

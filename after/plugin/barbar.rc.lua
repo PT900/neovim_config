@@ -21,12 +21,6 @@ require 'bufferline'.setup {
     { enabled = false }, -- WARN
     { enabled = false }, -- INFO
     { enabled = true }, -- HINT
-
-    -- OR `vim.diagnostic.severity`
-    [vim.diagnostic.severity.ERROR] = { enabled = true, icon = 'ﬀ' },
-    [vim.diagnostic.severity.WARN] = { enabled = false },
-    [vim.diagnostic.severity.INFO] = { enabled = false },
-    [vim.diagnostic.severity.HINT] = { enabled = true },
   },
 
   -- Excludes buffers from the tabline
@@ -43,7 +37,7 @@ require 'bufferline'.setup {
   highlight_inactive_file_icons = false,
 
   -- Enable highlighting visible buffers
-  highlight_visible = true,
+  highlight_visible = false,
 
   -- Enable/disable icons
   -- if set to 'numbers', will show buffer index in the tabline
@@ -93,6 +87,7 @@ require 'bufferline'.setup {
   no_name_title = nil,
 }
 
+-- Handle events for nvim-tree
 local nvim_tree_events = require('nvim-tree.events')
 local bufferline_api = require('bufferline.api')
 
