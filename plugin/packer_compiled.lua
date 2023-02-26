@@ -114,20 +114,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
-  ["fzf.vim"] = {
-    loaded = true,
-    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzf.vim",
-    url = "https://github.com/junegunn/fzf.vim"
-  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
-  },
-  ["lexima.vim"] = {
-    loaded = true,
-    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lexima.vim",
-    url = "https://github.com/cohama/lexima.vim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -144,6 +134,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nightfox.nvim",
@@ -153,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -173,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
@@ -199,10 +209,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["prettier.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
   tagbar = {
     loaded = true,
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tagbar",
     url = "https://github.com/preservim/tagbar"
+  },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -224,11 +244,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-lsp",
     url = "https://github.com/prabirshrestha/vim-lsp"
   },
-  ["vim-lsp-settings"] = {
-    loaded = true,
-    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-lsp-settings",
-    url = "https://github.com/mattn/vim-lsp-settings"
-  },
   ["vim-matchup"] = {
     after_files = { "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-matchup\\after\\plugin\\matchit.vim" },
     loaded = false,
@@ -241,6 +256,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
+  },
+  ["whitespace.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\whitespace.nvim",
+    url = "https://github.com/jdhao/whitespace.nvim"
   }
 }
 
@@ -249,7 +271,7 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-matchup'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'whitespace.nvim', 'vim-matchup'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

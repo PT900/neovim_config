@@ -7,14 +7,12 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
-
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   -- All about lsp and completion
   use 'prabirshrestha/vim-lsp'
   use 'nvim-lua/plenary.nvim'
   use 'neovim/nvim-lspconfig'
-  use 'mattn/vim-lsp-settings'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'glepnir/lspsaga.nvim'
@@ -38,18 +36,17 @@ packer.startup(function(use)
   -- Code format
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as language server
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in
-  use 'ntpeters/vim-better-whitespace' -- Trim extra whitespace
+  use { 'jdhao/whitespace.nvim', event = 'VimEnter' } -- Plugin that handle whitespace
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   -- Beautify
   use 'nvim-lualine/lualine.nvim' -- Status bar at bottom
-  use 'akinsho/bufferline.nvim' -- Tab bar at top
-  use 'EdenEast/nightfox.nvim'
-  use 'nvim-tree/nvim-web-devicons'
+  use 'romgrk/barbar.nvim' -- Tab bar at top
+  use 'EdenEast/nightfox.nvim' -- Colorscheme
+  use 'nvim-tree/nvim-web-devicons' -- Icons
   -- Functional & Tools
-  use 'tpope/vim-fugitive'
+  use 'tpope/vim-fugitive' -- Git in vim
   use 'tpope/vim-rhubarb'
-  use 'cohama/lexima.vim'
   use { 'andymass/vim-matchup', event = 'VimEnter' }
   use { 'numToStr/Comment.nvim',
     requires = {
@@ -58,9 +55,7 @@ packer.startup(function(use)
   }
   use 'nvim-tree/nvim-tree.lua'
   use 'preservim/tagbar'
-  use 'junegunn/fzf.vim'
   use 'sindrets/diffview.nvim'
-  -- Speedup on start up
+  -- Speedup on startup
   use 'lewis6991/impatient.nvim'
-
 end)
