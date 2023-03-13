@@ -15,13 +15,13 @@ require 'bufferline'.setup {
   clickable = true,
 
   -- Enables / disables diagnostic symbols
-  diagnostics = {
-    -- you can use a list
-    { enabled = true, icon = 'ﬀ' }, -- ERROR
-    { enabled = false }, -- WARN
-    { enabled = false }, -- INFO
-    { enabled = true }, -- HINT
-  },
+  -- diagnostics = {
+  -- you can use a list
+  --   { enabled = true, icon = 'ﬀ' }, -- ERROR
+  --   { enabled = false }, -- WARN
+  --   { enabled = false }, -- INFO
+  --   { enabled = true }, -- HINT
+  -- },
 
   -- Excludes buffers from the tabline
   exclude_ft = { 'javascript' },
