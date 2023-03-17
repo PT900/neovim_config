@@ -8,10 +8,12 @@ saga.setup({
     colors = {
       normal_bg = '#002b36'
     }
+  },
+  diagnostic = {
+    on_insert = false
   }
 })
 
-local diagnostic = require("lspsaga.diagnostic")
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', 'gl', '<Cmd>Lspsaga show_diagnostic<CR>', opts)
