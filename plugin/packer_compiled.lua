@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\flutter-tools.nvim",
     url = "https://github.com/akinsho/flutter-tools.nvim"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
-  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "C:\\Users\\peat2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim",
