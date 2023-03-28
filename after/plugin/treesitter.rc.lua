@@ -1,4 +1,4 @@
-require 'nvim-treesitter.install'.compilers = { "clang" }
+require 'nvim-treesitter.install'.compilers = { "zig" }
 require 'nvim-treesitter.install'.prefer_git = false
 require 'nvim-treesitter.configs'.setup {
   -- auto_install = true,
