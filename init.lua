@@ -1,6 +1,3 @@
--- Speedup load
-require('impatient')
-
 -- My Plugins
 require('pt900.plugins')
 

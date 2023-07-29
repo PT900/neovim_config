@@ -76,6 +76,4 @@ packer.startup(function(use)
   -- use 'nvim-tree/nvim-tree.lua'
   use 'preservim/tagbar'
   use 'sindrets/diffview.nvim'
-  -- Speedup on startup
-  use 'lewis6991/impatient.nvim'
 end)
