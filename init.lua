@@ -1,3 +1,6 @@
+-- Speedup Load
+vim.loader.enable()
+
 -- My Plugins
 require('pt900.plugins')
 
