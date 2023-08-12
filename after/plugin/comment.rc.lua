@@ -7,7 +7,7 @@ comment.setup {
     -- Line comment
     line = '<leader>cc',
     -- Block comment
-    block = '<leaderbc',
+    block = '<leader>bc',
   },
   opleader = {
     -- Line visual comment
