@@ -29,5 +29,6 @@ vim.go.tw = 150
 vim.opt.wrap = false -- No Wrap lines
 vim.cmd("filetype plugin on")
 vim.opt.backspace = { 'start', 'eol', 'indent' }
-vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]] -- Format on save
+vim.opt.path:append { '**' }                                 -- Finding files - Search down into subfolders
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]   -- Format on save
+vim.cmd [[autocmd FileType * setlocal formatoptions -= cro]] -- Disable auto comment when newline on commented line
